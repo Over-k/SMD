@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="them-color" content="#ffdf3b">
+    <link rel="icon" href="img/8.jpg">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Social Networking App</title>
+  </head>
+
+  <body>
+    <div class="loading"><div class="loader"></div></div>
+    <div class="modal hidden">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="modal-close">
+            <i class="fas fa-times"></i></span>
+          <h2>Loading...</h2>
+        </div>
+        <div class="modal-body">
+          <img src="img/download.jpg" alt="">
+        </div>
+        <div class="modal-cnt">
+          You can see more about : <strong>Loading...</strong>
+          <div class="modal-inf">
+            <div class="modal-inf__item">
+              <div class="modal-inf__title">3.5k</div>
+              <div class="modal-inf__txt">Followers</div>
+            </div>
+            <div class="modal-inf__item">
+              <div class="modal-inf__title">65k</div>
+              <div class="modal-inf__txt">Following</div>
+            </div>
+            <div class="modal-inf__item">
+              <div class="modal-inf__title">123</div>
+              <div class="modal-inf__txt">Articles</div>
+            </div>
+            <div class="modal-inf__item">
+              <div class="modal-inf__title">13</div>
+              <div class="modal-inf__txt">Profile visited</div>
+            </div>
+          </div>
+          <div class="modal-btn">
+            <span class="tag">Loading...</span>
+            <span class="tag">Loading...</span>
+          </div>
+        </div><!-- cnt -->
+        <div class="modal-msg">
+          <textarea placeholder="Say something..."></textarea>
+          <div class="btn-bottom">
+            <span class="msg-btn tag">Send</span>
+            <span class="msg-btn tag">Close</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="form__container hidden">
+      <form class="form" id="login">
+        <div class="form__logo">
+          <i class="fas fa-user"></i>
+        </div>
+        <div class="form__message form__message--error"></div>
+        <div class="form__input-group">
+          <input type="text" class="form__input" autofocus placeholder="Username or email">
+          <div class="form__input-error-message"></div>
+        </div>
+        <div class="form__input-group">
+          <input type="password" id="pwd" class="form__input" autofocus placeholder="Password">
+          <div class="form__input-error-message"></div>
+        </div>
+        <button class="form__button" type="button">Continue</button>
+        <p class="form__text">
+          <a class="form__link" id="linkCreateAccount">Don't have an account? Create account</a>
+        </p>
+      </form>
+      <form class="form hidden" id="createAccount">
+        <div class="form__logo">
+          <input type="file" class="addfile" style="display: none;">
+          <i class="fas fa-images"></i>
+        </div>
+        <div class="form__message form__message--error"></div>
+        <div class="form__input-group">
+          <input type="text" id="Username" class="form__input" autofocus placeholder="Username">
+          <div class="form__input-error-message"></div>
+        </div>
+        <div class="form__input-group">
+          <input type="email" id="Email" class="form__input" autofocus placeholder="Email Address">
+          <div class="form__input-error-message"></div>
+        </div>
+        <div class="form__input-group">
+          <input type="password" id="Password" class="form__input" autofocus placeholder="Password">
+          <div class="form__input-error-message"></div>
+        </div>
+        <button class="form__button" type="button">Continue</button>
+        <p class="form__text">
+          <a class="form__link" href="./" id="linkLogin">Already have an account? Sign in</a>
+        </p>
+      </form>
+    </div>
+    <main class="hidden">
+      <section class="live">
+        <div class="person live-active">
+          <div class="profile-pic"></div>
+          <p class="name">new post</p>
+          <span><i class="fas fa-plus"></i>add</span>
+        </div>
+        <div class="person live-active">
+          <div class="profile-pic"></div>
+          <p class="name">Todoroki</p>
+        </div>
+        <div class="person">
+          <div class="profile-pic"></div>
+          <p class="name">Oreki</p>
+        </div>
+        <div class="person live-active">
+          <div class="profile-pic"></div>
+          <p class="name">Midoriya</p>
+          <span><i class="fas fa-video"></i>Live</span>
+        </div>
+        <div class="person">
+          <div class="profile-pic"></div>
+          <p class="name">Obanai</p>
+        </div>
+        <div class="person">
+          <div class="profile-pic"></div>
+          <p class="name">Zu Shi</p>
+        </div>
+        <div class="person">
+          <div class="profile-pic"></div>
+          <p class="name">Meliodas</p>
+        </div>
+        <div class="person">
+          <div class="profile-pic"></div>
+          <p class="name">Gilbert</p>
+        </div>
+      </section>
+      <section class="section newsfeed">
+        <!--about posts-->
+      </section>
+      <section class="section hidden">
+         <!--about stars-->
+      </section>
+      <section class="section hidden">
+        <div class="chats">
+          <div class="card">
+            <div class="content">
+              <div class="header">
+                <div class="profile-pic"></div>
+                <div class="detail">
+                  <p class="name">Khalid ait miloud</p>
+                  <p class="posted">last message</p>
+                </div>
+                <div class="switch chat">
+                  <i class="fas fa-keyboard"></i>
+                </div>
+              </div>
+            </div>
+            <div class="chatbox hidden">
+              <div id="chatbox">
+                <p id="botStarterMessage" class="botText">
+                  <span>Loading...</span>
+                </p>
+              </div>
+              <div class="commenter">
+                <div class="pic"></div>
+                <div class="input">
+                  <input type="text" class="input-box" id="textInput" placeholder=" Tap 'Enter' to send a message">
+                  <button>
+                    <i class="fas fa-paper-plane"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+      </section>
+      <section class="section hidden">
+        <div class="notification">
+          <div class="card">
+            <div class="content">
+              <div class="header">
+                <i class="fas fa-user"></i>
+                <div class="detail">
+                  <p class="name">Khalid ait miloud</p>
+                  <p class="posted">add new image at 23 hours ago.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="content">
+              <div class="header">
+                <i class="fas fa-user-secret"></i>
+                <div class="detail">
+                  <p class="name">khalid ait miloud</p>
+                  <p class="posted">"khalid ait miloud" visited your personal account.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section hidden">
+        <div class="profile user">
+          <div class="header-profile">
+            <img src="img/cover.png" class="header-image" />
+            <div class="header">
+              <h1 class="main-heading">Loading...</h1>
+              <span class="tag">Admin</span>
+              <span class="tag">Dashboard</span>
+              <span class="tag logout"><i class="fas fa-power-off"></i> logout</span>
+              <div class="stats">
+                <span class="stat-module">
+                  Posts <span class="stat-number">56K</span>
+                </span>
+                <span class="stat-module">
+                  Likes <span class="stat-number">40K</span>
+                </span>
+                <span class="stat-module">
+                  start <span class="stat-number">11K</span>
+                </span>
+              </div>
+            </div><!-- END header -->
+          </div>
+          <div class="overlay-header"></div>
+          <div class="body">
+            <div class="body-image"></div>
+            <div class="body-action-button u-flex-center">
+              <i class="fas fa-fingerprint"></i>
+            </div>
+            <span class="body-stats">Followers <span>3.5k</span></span>
+            <span class="body-stats">Following <span>1.9k</span></span>
+            <div class="u-clearfix"></div>
+            <div class="body-info">
+              <p>
+                Loading... is an Morocco...
+              </p>
+              <p>
+                In This app, I am ********** ***** **** ***.
+              </p>
+            </div>
+            <div class="creatpost hidden">
+              <div class="wrapper">
+                <div class="input-box">
+                  <div class="tweet-area">
+                    <span class="placeholder">What's happening?</span>
+                    <div class="input editable" contenteditable="true" spellcheck="false"></div>
+                    <div class="input readonly" contenteditable="true" spellcheck="false"></div>
+                  </div>
+                  <div class="privacy">
+                    <i class="fas fa-hashtag"></i>
+                    <input type="text" placeholder="Tag...">
+                  </div>
+                </div>
+                <div class="bottom">
+                  <ul class="icons">
+                    <li><i class="fas fa-times-circle"></i></li>
+                    <li><i class="fas fa-camera"></i><img src="" class="hidden"><input type="file" data=""
+                        class="hidden"></li>
+                  </ul>
+                  <div class="content">
+                    <span class="counter">100</span>
+                    <button>Post</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <form class="form hidden" id="edit">
+              <div class="form__input-group">
+                <input type="button" value="change profile pic" class="form__input">
+              </div>
+              <div class="form__input-group">
+                <input type="text" value="" class="form__input"
+                  placeholder="Add a short bio to tell people more about yourself">
+                <div class="form__input-error-message"></div>
+              </div>
+              <div class="form__input-group">
+                <input type="text" class="form__input" autofocus placeholder="Add full name">
+                <div class="form__input-error-message"></div>
+              </div>
+              <div class="form__input-group">
+                <input type="text" class="form__input" autofocus placeholder="Add email">
+                <div class="form__input-error-message"></div>
+              </div>
+              <div class="form__input-group">
+                <input type="text" class="form__input" autofocus placeholder="Add a number">
+                <div class="form__input-error-message"></div>
+              </div>
+              <div class="form__input-group">
+                <input type="text" class="form__input" autofocus
+                  placeholder="Add a short bio to tell people more about yourself">
+                <div class="form__input-error-message"></div>
+              </div>
+              <div class="form__input-group">
+                <input type="text" class="form__input" autofocus
+                  placeholder="Add a short bio to tell people more about yourself">
+                <div class="form__input-error-message"></div>
+              </div>
+              <div class="form__input-group">
+                <input type="text" class="form__input" autofocus placeholder="New Username">
+                <div class="form__input-error-message"></div>
+              </div>
+              <div class="form__input-group">
+                <input type="text" class="form__input" autofocus placeholder="New Email Address">
+                <div class="form__input-error-message"></div>
+              </div>
+              <div class="form__input-group">
+                <input type="password" class="form__input" autofocus placeholder="Current Password">
+                <div class="form__input-error-message"></div>
+              </div>
+              <div class="form__input-group">
+                <input type="password" class="form__input" autofocus placeholder="New password">
+                <div class="form__input-error-message"></div>
+              </div>
+              <input type="file" class="hidden">
+              <button class="form__button">Save</button>
+            </form>
+            <div class="card u-clearfix">
+              <span class="card-heading">Gallery</span>
+              <div class="add-more"><i class="fas fa-plus"></i></div>
+              <ul class="card-list">
+                <li><img src="img/0.jpg" alt=""></li>
+                <li><img src="img/1.jpg" alt=""></li>
+                <li><img src="img/2.jpg" alt=""></li>
+                <li><img src="img/3.jpg" alt=""></li>
+                <li><img src="img/4.jpg" alt=""></li>
+                <li><img src="img/5.jpg" alt=""></li>
+              </ul>
+            </div>
+      </section>
+      <section class="nav">
+        <div class="icon active">
+          <i class="fas fa-fire"></i>
+          <p>Home</p>
+        </div>
+        <div class="icon">
+          <i class="fas fa-star"></i>
+          <p>Star</p>
+        </div>
+        <div class="icon">
+          <i class="fas fa-comment-dots"></i>
+          <p>Chats</p>
+        </div>
+        <div class="icon">
+          <i class="fas fa-bell"></i>
+          <p>Notifications</p>
+        </div>
+        <div class="icon">
+          <i class="fas fa-user"></i>
+          <p>Profile</p>
+        </div>
+      </section>
+    </main>
+    <div class="modl hidden hide">
+      <div class="search-input">
+        <div class="back">
+          <i class="fas fa-arrow-left"></i>
+        </div>
+        <div class="toggle hidden">
+          <i class="fas fa-user toggle-icon"></i>
+          <i class="fas fa-camera toggle-icon"></i>
+          <div class="toggle-ball"></div>
+        </div>
+        <div class="search">
+          <i class="fas fa-search"></i>
+          <input type="text" placeholder="search...">
+        </div>
+      </div>
+      <section class="section newsfeed">
+        <div class="profile">
+          <div class="header-profile">
+            <img src="img/cover.png" class="header-image">
+            <div class="header">
+              <h1 class="main-heading">Loading...</h1>
+              <span class="tag">Admin</span>
+              <span class="tag">Dashboard</span>
+              <div class="stats">
+                <span class="stat-module">
+                  Posts <span class="stat-number">1</span>
+                </span>
+                <span class="stat-module">
+                  Likes <span class="stat-number">0</span>
+                </span>
+                <span class="stat-module">
+                  start <span class="stat-number">11K</span>
+                </span>
+              </div>
+            </div><!-- END header -->
+          </div>
+          <div class="overlay-header"></div>
+          <div class="body">
+            <div class="body-image" style="background-image:url(img/download.jpg)"></div>
+            <div class="body-action-button u-flex-center">
+              <i class="fas fa-dragon"></i>
+            </div>
+            <span class="body-stats">Followers <span>0</span></span>
+            <span class="body-stats">Following <span>0</span></span>
+            <div class="u-clearfix"></div>
+            <div class="body-info">about yourself</div>
+            <div class="card u-clearfix">
+              <span class="card-heading">Gallery</span>
+              <ul class="card-list">
+                <li><img src="img/0.jpg" alt=""></li>
+                <li><img src="img/1.jpg" alt=""></li>
+                <li><img src="img/2.jpg" alt=""></li>
+                <li><img src="img/3.jpg" alt=""></li>
+                <li><img src="img/4.jpg" alt=""></li>
+                <li><img src="img/5.jpg" alt=""></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="search-output">
+        </div>
+      </section>
+    </div>
+    <div class="space"></div>
+    <div class="alert hidden">
+      <div class="toast">
+        <div class="content">
+          <div class="icon"><i class="fas fa-wifi"></i></div>
+          <div class="details">
+            <span>now</span>
+            <p>Hurray!</p>
+          </div>
+        </div>
+        <div class="close-icon"><i class="fas fa-times"></i></div>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
+    <script src="js/anime.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/post.js"></script>
+    <script src="js/chat.js"></script>
+  </body>
+</html>
